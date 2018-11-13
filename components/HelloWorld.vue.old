@@ -1,0 +1,32 @@
+<template>
+  <div @androidback="back">
+    <list class="list">
+        <cell class="cell" @click="jump('/h1')">
+            <text>h1<text>
+        </cell>
+        <cell class="cell" @click="jump('/h2')">
+            <text>h2<text>
+        </cell>
+        <cell class="cell" @click="jump('/h3')">
+            <text>h3<text>
+        </cell>
+    </list>
+    <router-view style="flex:1"></router-view>
+  </div>
+</template>
+<script>
+//import Router from '../router'
+export default {
+    methods: {
+        back: function () {
+            //Router.back()
+        },
+        jump (to) {
+          console.log('to='+to);
+        //if (this.$router) {
+          //Router.push(to)
+        //}
+      }
+    }
+}
+</script>
